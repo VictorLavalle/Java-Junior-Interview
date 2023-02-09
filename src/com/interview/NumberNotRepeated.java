@@ -11,11 +11,36 @@ public class NumberNotRepeated {
 
     public static void main(String[] args) {
         int[] numbers = {3, 4, 4, 3, 5, 1, 5, 7, 8, 8, 7};
+        checkNumberNotRepeated0(numbers);
         checkNumberNotRepeated(numbers);
 
-        List<Integer> numbers2 = Arrays.asList(3, 4, 4, 3, 5, 1, 5, 7, 8, 8, 7);
-        checkNumberNotRepeated2(numbers2);
+        List<Integer> otherNumbers = Arrays.asList(3, 4, 4, 3, 5, 1, 5, 7, 8, 8, 7);
+        checkNumberNotRepeated2(otherNumbers);
+        //checkNumberNotRepeated3(otherNumbers);
+
+
+
+
+
     }
+
+    //Solution #0 - Using a for loop --> Not recommended because it is not the best way to do it
+    public static void checkNumberNotRepeated0(int[] numbers) {
+        for (int i = 0; i < numbers.length; i++) {
+            boolean flag = false;
+            for (int j = 0; j < numbers.length; j++) {
+                if (i != j && numbers[i] == numbers[j]) {
+                    flag = true;
+                    break;
+                }
+            }
+            if (!flag) {
+                System.out.println("The number not repeated is: " + numbers[i]);
+                break;
+            }
+        }
+    }
+
 
     //Solution #1 - Use of XOR operator, but only works with numbers that are not repeated twice or more
     public static void checkNumberNotRepeated(int[] numbers) {
