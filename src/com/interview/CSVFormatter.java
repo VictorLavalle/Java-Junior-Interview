@@ -18,7 +18,6 @@ public class CSVFormatter {
 
         //Solution
         //----------------------------------------------
-        //
         // Split the input string into individual lines
         String[] lines = studentsNotes.split("\n");
 

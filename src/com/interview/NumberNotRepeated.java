@@ -17,11 +17,6 @@ public class NumberNotRepeated {
         List<Integer> otherNumbers = Arrays.asList(3, 4, 4, 3, 5, 1, 5, 7, 8, 8, 7);
         checkNumberNotRepeated2(otherNumbers);
         //checkNumberNotRepeated3(otherNumbers);
-
-
-
-
-
     }
 
     //Solution #0 - Using a for loop --> Not recommended because it is not the best way to do it
